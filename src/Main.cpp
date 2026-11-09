@@ -1,0 +1,20 @@
+#include "Application.hpp"
+#include "Error.hpp"
+#include "prx/libkernel/Time/include/Time.hpp"
+#include "prx/libkernel/include/Api.hpp"
+#include <cstdio>
+
+int main() {
+    try {
+        Application{}.Run();
+        return 0;
+    } catch (const Error& error) {
+        char message[256];
+        const int length = std::snprintf(message, sizeof(message), "PixelFireworks: %s (0x%08x)\n", error.Message, static_cast<unsigned>(error.Code));
+        if (length < 0 || static_cast<std::size_t>(length) >= sizeof(message)) throw Error{"Error message is too long"};
+        Check(sceKernelDebugOutText(0, message), "sceKernelDebugOutText");
+
+        return 1;
+    }
+}
+

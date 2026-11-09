@@ -1,0 +1,32 @@
+#ifndef PixelFireworks_Graphics_Display_hpp
+#define PixelFireworks_Graphics_Display_hpp
+#include "Graphics/Memory.hpp"
+#include <array>
+
+class Display final {
+public:
+    struct Flip {
+        int Handle;
+        int BufferIndex;
+        std::int64_t Argument;
+    };
+    Display(int width, int height);
+    ~Display() noexcept(false);
+    Display(const Display&) = delete;
+    Display& operator=(const Display&) = delete;
+    void* Acquire();
+    Flip PrepareFlip();
+    void CompleteFlip();
+
+private:
+    static constexpr std::size_t bufferCount = 3;
+    Memory memory;
+    int handle = -1;
+    int back = 0;
+    std::int64_t sequence = 0;
+    std::uint64_t* labels = nullptr;
+    bool acquired = false;
+    std::array<void*, bufferCount> buffers{};
+};
+#endif
+

@@ -1,0 +1,25 @@
+{
+  "name": "PixelFireworks",
+  "schemaVersion": 1,
+  "targets": {
+    "ps5": {
+      "app0": "app0",
+      "application-version": "0",
+      "authority": "0x3100000000000002",
+      "companion-sdk-version": "0x08050001",
+      "elf-sdk-version": "0x02000009",
+      "file-name": "PixelFireworks.elf",
+      "format": "ffpfsc",
+      "input": "build/ps5/PixelFireworks.elf",
+      "module-name": "PixelFireworks",
+      "output": "dist/ps5/PixelFireworks.ffpfsc",
+      "param": "app0/sce_sys/param.json",
+      "select-import": [
+        "sceKernelMapDirectMemory,libkernel,libkernel"
+      ],
+      "self-firmware-version": "0",
+      "timestamp": "0",
+      "workspace": "build/package"
+    }
+  }
+}

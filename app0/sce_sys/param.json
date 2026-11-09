@@ -1,0 +1,18 @@
+{
+  "titleId": "FAKE62791",
+  "contentId": "IV0000-FAKE62791_00-ANYDEVKIT0000001",
+  "conceptId": "62791485",
+  "contentVersion": "01.000.000",
+  "masterVersion": "01.00",
+  "applicationCategoryType": 0,
+  "applicationDrmType": "standard",
+  "attribute": 0,
+  "attribute2": 0,
+  "attribute3": 64,
+  "requiredSystemSoftwareVersion": "0x0200000000000000",
+  "sdkVersion": "0x0200000000000000",
+  "localizedParameters": {
+    "defaultLanguage": "en-US",
+    "en-US": {"titleName": "PixelFireworks"}
+  }
+}
