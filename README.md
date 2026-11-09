@@ -4,7 +4,7 @@ A silent pixel-art fireworks show for PS5 homebrew, written in C++ with
 [AnyDevKit](https://github.com/boykopovar/AnyDevKit). It is an example from
 [AnyDevStudio](https://github.com/AnyDevStudio).
 
-![Pixel Fireworks running at about 119 FPS](docs/screenshot.png)
+![Pixel Fireworks running at about 119 FPS](docs/demo.gif)
 
 Everything in the game is drawn by code. There are no image files in the game itself:
 
